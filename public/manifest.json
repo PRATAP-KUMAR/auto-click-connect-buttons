@@ -9,9 +9,10 @@
     "default_icon": "custom_icon.svg"
   },
   "permissions": [
-    "scripting"
+    "scripting",
+    "tabs"
   ],
   "host_permissions": [
-    "https://linkedin.com/*/"
+    "https://www.linkedin.com/*/"
   ]
 }

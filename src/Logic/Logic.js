@@ -1,10 +1,14 @@
 const Logic = () => {
-    // let connectButtons = document.getElementsByTagName('button');
-    let buttons = document.querySelector('[aria-label^="Invite"]')
-    Array.from(buttons).forEach((e) => {
-        console.log(e);
-        alert(e);
-    })
+    let buttons = document.querySelectorAll('[aria-label^="Invite"]');
+    if (buttons.length) {
+        buttons.forEach((btn, idx) => {
+            setTimeout(() => {
+                btn.remove();
+            }, 5000 * (idx + 1));
+        })
+    } else {
+        alert('No buttons found');
+    }
 }
 
 export default Logic;

@@ -20,6 +20,7 @@ function App() {
       </h2>
       <button
         type='button'
+        id='CONNECT-EXTENSION'
         aria-label='click to auto click on connect button'
         onClick={dom}
       >

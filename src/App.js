@@ -1,3 +1,4 @@
+import Logic from './Logic/Logic';
 import './App.css';
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
       const activeTabId = tabs[0].id
       chrome.scripting.executeScript({
         target: { tabId: activeTabId },
-        function: () => alert("HI"),
+        function: Logic,
       });
     })
   }

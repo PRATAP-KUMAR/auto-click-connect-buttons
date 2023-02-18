@@ -148,7 +148,7 @@ If you like this project kindly give a start to this repository
 
   - Its a takehome assignment to create a Chrome Extension
 
-- **How long did you take to build this extension*
+- **How long did you take to build this extension**
 
   - 3 Days
 

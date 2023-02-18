@@ -1,4 +1,6 @@
-LinkedIn AutoConnect
+<div align="center">
+  <h1><b>LinkedIn AutoConnect - Chrome Extension</b></h1>
+</div>
 
 <a name="readme-top"></a>
 

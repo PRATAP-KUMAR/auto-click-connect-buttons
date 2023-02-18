@@ -1,4 +1,6 @@
-LinkedIn AutoConnect
+<div align="center">
+  <h1><b>LinkedIn AutoConnect</b></h2>
+</div>
 
 <a name="readme-top"></a>
 

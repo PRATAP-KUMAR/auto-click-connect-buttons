@@ -79,7 +79,7 @@ npm install npm@latest -g
 ### Installation
 1. Clone the repo
 ````
-git clone https://github.com//PRATAP-KUMAR/side-project-todo
+git clone https://github.com//PRATAP-KUMAR/click-on-connect
 ````
 2. Install NPM packages
 ````
@@ -134,7 +134,7 @@ If you like this project kindly give a start to this repository
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- I would like to thank [Microverse](https://www.microverse.org/)  
+- I would like to thank the person who gave me this assignment. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -144,9 +144,9 @@ If you like this project kindly give a start to this repository
 
 - **What is this repo for**
 
-  - Its a side-project for my practice using React
+  - Its a takehome assignment to create a Chrome Extension
 
-- **How long did you take to build this web app**
+- **How long did you take to build this extension*
 
   - 3 Days
 

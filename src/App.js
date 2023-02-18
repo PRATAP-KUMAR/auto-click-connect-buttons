@@ -40,7 +40,6 @@ function App() {
 
   const dom = (e) => {
     e.target.remove();
-    alert(window.location.href);
     setActive(true);
     chrome.storage.local.set({ count: 0 });
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {

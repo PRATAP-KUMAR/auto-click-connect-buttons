@@ -1,11 +1,11 @@
 {
   "manifest_version": 3,
-  "name": "Click on connect button",
+  "name": "LinkedIn Auto Connect",
   "description": "Automate the clicking on Connect button, skip on message button",
   "version": "0.0.1",
   "action": {
     "default_popup": "index.html",
-    "default_title": "Open the extension to see start button",
+    "default_title": "LinkedIn Auto Connect",
     "default_icon": "custom_icon.svg"
   },
   "permissions": [

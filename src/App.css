@@ -1,4 +1,81 @@
-.extension-container{
-  width: 10rem;
-  height: 10rem;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.extension-container {
+  width: 20rem;
+  background-color: #1217ba;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.header-bar {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #2e2f48;
+  padding: 0.5rem;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.invitations-count {
+  font-size: 2rem;
+  margin: 2rem;
+}
+
+.status {
+  margin: 1rem;
+  align-items: center;
+}
+
+button {
+  border: none;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+button:hover {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
+}
+
+@keyframes shake {
+
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }

@@ -61,6 +61,7 @@ function App() {
                 isPlaying
                 duration={timer * DURATION}
                 colors="orange"
+                size={100}
               >
                 {count}
               </CountdownCircleTimer>

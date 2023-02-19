@@ -102,7 +102,7 @@ Just a browser
 8. Now you are in the Extensions page, Make sure the "Developer mode" is turned on at the right top.
 ![image](https://user-images.githubusercontent.com/40719899/219945815-3bc36852-ba5f-4a1b-8188-30aa6211cd5b.png)
 
-9. Click on Load unpcked
+9. Click on "Load unpacked"
 
 ![image](https://user-images.githubusercontent.com/40719899/219945842-f3fe4bb8-d4f8-43dd-94eb-df1dbcc68c87.png)
 

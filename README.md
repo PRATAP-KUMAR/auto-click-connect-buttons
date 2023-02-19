@@ -184,7 +184,7 @@ If you like this project kindly give a start to this repository
 
 - **What is this repo for**
 
-  - Its a side-project for my practice using React
+  - Its a take home assignment for creating a chrome extension that makes auto clicking on "Connect" buttons
 
 - **How long did you take to build this web app**
 

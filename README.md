@@ -174,7 +174,7 @@ If you like this project kindly give a start to this repository
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- I would like to thank [Microverse](https://www.microverse.org/)  
+- I would like to thank the person who gave me this take home assignment opportunity
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

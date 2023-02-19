@@ -130,7 +130,7 @@ then click on extension icon, you can see the installed extension and an option 
 If needed please let me know, I will change the one line and ship the zip file.
 
 There is a bug for the first time to fetch n syncronising data from the script file to extension. Refresh the page and click button again.  
-I am still referncing the documents on how to eliminate this bug.
+I am still referencing the documents on how to eliminate this bug.
 
 ![LinkedInAutoConnect](https://user-images.githubusercontent.com/40719899/219946474-376ff9c9-beeb-4e65-a0e9-8e4e5337b092.gif)
 

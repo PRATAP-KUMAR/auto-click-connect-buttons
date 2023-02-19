@@ -2,10 +2,8 @@
 import { useState } from 'react';
 import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 import script from './script';
-import count from './count';
-import './App.css';
-
 import DURATION from './duration';
+import './App.css';
 
 function App() {
   const [isActive, setActive] = useState(false);
@@ -27,6 +25,16 @@ function App() {
         setTimer(result.timer);
         setActive(true);
       });
+  };
+
+  const count = ({ remainingTime }) => {
+    const TOTAL_DURATION = timer * DURATION;
+    const result = Math.floor((TOTAL_DURATION - remainingTime) / DURATION);
+    return (
+      <div role="timer" aria-live="assertive" className="timer">
+        {result}
+      </div>
+    );
   };
 
   return (

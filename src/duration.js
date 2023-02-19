@@ -1,3 +1,3 @@
-const DURATION = 5;
+const DURATION = 2;
 
 export default DURATION;

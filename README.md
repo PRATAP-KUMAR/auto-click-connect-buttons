@@ -95,7 +95,7 @@ Just a browser
 
 6. Close the folder and open browser, on the right top see the small extension icon, click it.
 
-![image](https://user-images.githubusercontent.com/40719899/219945655-2bb6bac0-af25-45b4-a6ce-a67aab0d6268
+![image](https://user-images.githubusercontent.com/40719899/219945655-2bb6bac0-af25-45b4-a6ce-a67aab0d6268.png)
 
 7. Click "Manage extensions" from the opened menu
 

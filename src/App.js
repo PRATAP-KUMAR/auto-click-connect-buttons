@@ -17,7 +17,7 @@ function App() {
         target: { tabId: activeTabId },
         args: [DURATION],
         function: script,
-      });
+      }).then(() => hasSelectionSupport(5000));
     });
 
     chrome.storage.sync.get(['timer'])

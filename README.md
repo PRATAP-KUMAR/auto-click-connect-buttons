@@ -166,7 +166,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project kindly give a start to this repository
+If you like this project kindly give a star to this repository
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -186,7 +186,7 @@ If you like this project kindly give a start to this repository
 
   - Its a take home assignment for creating a chrome extension that makes auto clicking on "Connect" buttons
 
-- **How long did you take to build this web app**
+- **How long did you take to build this extension**
 
   - 3 Days
 

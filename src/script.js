@@ -1,8 +1,7 @@
 /* eslint-disable no-undef */
 function script(duration) {
   const buttons = document.querySelectorAll('[aria-label^="Invite"]');
-  chrome.storage.sync.set({ timer: buttons.length }).then(() => {
-  });
+  chrome.storage.sync.set({ timer: buttons.length })
 
   buttons.forEach((btn, idx) => {
     setTimeout(() => {

@@ -1,13 +1,15 @@
 /* eslint-disable no-undef */
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 import script from './script';
 import DURATION from './duration';
-import './App.css';
+import './Popup.css';
 
-function App() {
+function Popup() {
   const [isActive, setActive] = useState(false);
   const [timer, setTimer] = useState(0);
+
+  const buttonRef = useRef();
 
   const onClick = () => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
@@ -24,6 +26,9 @@ function App() {
         .then((result) => {
           setTimer(result.timer);
           setActive(true);
+          setTimeout(() => {
+            buttonRef.current.remove();
+          }, (result.timer * 1000 * DURATION));
         });
     }, 300);
   };
@@ -79,6 +84,7 @@ function App() {
         }
       </div>
       <button
+        ref={buttonRef}
         type="button"
         aria-label="click to auto click on connect button"
         onClick={onClick}
@@ -89,4 +95,4 @@ function App() {
   );
 }
 
-export default App;
+export default Popup;

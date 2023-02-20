@@ -11,3 +11,5 @@
 
 Please follow README on dev branch.
 Only thing is that `LinkedInAutoConnect.zip` file in this branch(v2) is the updated one with out sync bug as stated in loom video.
+
+![V2](https://user-images.githubusercontent.com/40719899/220165827-7e0c2a95-34be-416c-af2f-737756c3c4d0.gif)

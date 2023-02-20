@@ -9,22 +9,23 @@ function App() {
   const [isActive, setActive] = useState(false);
   const [timer, setTimer] = useState(0);
 
-  const onClick = (e) => {
-    e.target.remove();
+  const onClick = () => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       const activeTabId = tabs[0].id;
       chrome.scripting.executeScript({
         target: { tabId: activeTabId },
         args: [DURATION],
         function: script,
-      }).then(() => hasSelectionSupport(5000));
+      });
     });
 
-    chrome.storage.sync.get(['timer'])
-      .then((result) => {
-        setTimer(result.timer);
-        setActive(true);
-      });
+    setTimeout(() => {
+      chrome.storage.local.get(['timer'])
+        .then((result) => {
+          setTimer(result.timer);
+          setActive(true);
+        });
+    }, 300);
   };
 
   const count = ({ remainingTime }) => {

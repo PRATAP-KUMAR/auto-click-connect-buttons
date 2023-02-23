@@ -58,6 +58,7 @@ function Popup() {
             <h3 className="invitations-count">
               {`Invitations found on this page: ${timer}`}
               <br />
+              <br />
               <hr />
             </h3>
           )

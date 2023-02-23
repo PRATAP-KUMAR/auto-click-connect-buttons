@@ -8,24 +8,28 @@ import './Popup.css';
 function Popup() {
   const [isActive, setActive] = useState(false);
   const [timer, setTimer] = useState(0);
-
   const buttonRef = useRef();
 
   const onClick = () => {
+    setActive((x) => !x);
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       const activeTabId = tabs[0].id;
       chrome.scripting.executeScript({
         target: { tabId: activeTabId },
         args: [DURATION],
-        function: script,
+        func: !isActive ? script : () => {
+          window.timers.forEach(clearTimeout);
+          window.timers.length = 0;
+        },
       });
     });
+
+    if (isActive) buttonRef.current.remove();
 
     setTimeout(() => {
       chrome.storage.local.get(['timer'])
         .then((result) => {
           setTimer(result.timer);
-          setActive(true);
           setTimeout(() => {
             buttonRef.current.remove();
           }, (result.timer * 1000 * DURATION));
@@ -54,34 +58,23 @@ function Popup() {
             <h3 className="invitations-count">
               {`Invitations found on this page: ${timer}`}
               <br />
-              <br />
               <hr />
-              <br />
-              Invitations Sent
-              <br />
             </h3>
           )
-          : (
-            <h3 className="invitations-count">
-              Click the button below to start
-            </h3>
-          )
+          : null
       }
+      <h3 className="invitations-count">
+        Invitations Sent
+      </h3>
       <div className="status">
-        {
-          isActive
-            ? (
-              <CountdownCircleTimer
-                isPlaying
-                duration={timer * DURATION}
-                colors="orange"
-                size={100}
-              >
-                {count}
-              </CountdownCircleTimer>
-            )
-            : null
-        }
+        <CountdownCircleTimer
+          isPlaying={!!isActive}
+          duration={timer * DURATION}
+          colors="orange"
+          size={100}
+        >
+          {count}
+        </CountdownCircleTimer>
       </div>
       <button
         ref={buttonRef}

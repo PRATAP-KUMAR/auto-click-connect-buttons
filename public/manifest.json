@@ -8,10 +8,14 @@
     "default_title": "LinkedIn Auto Connect",
     "default_icon": "custom_icon.png"
   },
+  "background": {
+    "service_worker": "background.js"
+  },
   "permissions": [
     "scripting",
     "tabs",
-    "storage"
+    "storage",
+    "declarativeContent"
   ],
   "host_permissions": [
     "https://www.linkedin.com/*/"

@@ -27,14 +27,19 @@
   left: 0;
 }
 
-.invitations-count {
+.found,
+.sent {
   font-size: 1.5rem;
-  margin: 2rem;
+  margin: 1rem;
   color: #fff;
 }
 
+hr {
+  width: 80%;
+}
+
 .status {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .timer {

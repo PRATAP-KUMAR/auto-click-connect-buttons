@@ -55,16 +55,16 @@ function Popup() {
       {
         isActive
           ? (
-            <h3 className="invitations-count">
-              {`Invitations found on this page: ${timer}`}
-              <br />
-              <br />
+            <>
+              <h3 className="found">
+                {`Invitations found on this page: ${timer}`}
+              </h3>
               <hr />
-            </h3>
+            </>
           )
           : null
       }
-      <h3 className="invitations-count">
+      <h3 className="sent">
         Invitations Sent
       </h3>
       <div className="status">

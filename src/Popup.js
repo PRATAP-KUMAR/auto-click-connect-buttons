@@ -16,11 +16,8 @@ function Popup() {
       const activeTabId = tabs[0].id;
       chrome.scripting.executeScript({
         target: { tabId: activeTabId },
-        args: [DURATION],
-        func: !isActive ? script : () => {
-          window.timers.forEach(clearTimeout);
-          window.timers.length = 0;
-        },
+        args: [DURATION, isActive],
+        func: script,
       });
     });
 

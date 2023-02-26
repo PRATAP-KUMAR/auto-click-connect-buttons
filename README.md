@@ -1,5 +1,5 @@
 <div align="center">
-  <h1><b>LinkedIn AutoConnect</b></h2>
+  <h1><b>LinkedIn AutoConnect - Chrome Extension</b></h1>
 </div>
 
 <a name="readme-top"></a>
@@ -59,7 +59,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Loom Video Link - Not available yet](https://www.loom.com/)
+[Loom Video Link](https://www.loom.com/share/11e56c6d0a4d4a5db31e4b0086fca087)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -71,30 +71,68 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
-
-- npm
-````
-npm install npm@latest -g
-````
+Just a browser
 
 ### Installation
-1. Clone the repo
-````
-git clone https://github.com//PRATAP-KUMAR/click-on-connect
-````
-2. Install NPM packages
-````
-npm install
-````
+
+1. open this link https://github.com/PRATAP-KUMAR/auto-click-connect-buttons.
+
+2. click on LinkedInAutoConnect.zip file.
+
+![image](https://user-images.githubusercontent.com/40719899/219945292-8b11dab2-6a76-4225-b28a-dd9b234fb7d6.png)
+
+3. click on the Download button at the bottom left.
+
+![image](https://user-images.githubusercontent.com/40719899/219945365-9a6887c3-a9bf-4b54-9997-2b2ce3c68df9.png)
+
+4. Go to the downloaded directory and extract the zip file.
+
+![image](https://user-images.githubusercontent.com/40719899/219945418-be3b931d-7797-40ea-b619-4186cc1cd55f.png)
+
+5. Just check the extracted file to see `build` folder as this is our target folder for installing Chrome Extension.
+
+![image](https://user-images.githubusercontent.com/40719899/219945566-e3895bd4-d84b-43d2-9a2c-d03288b7eafc.png)
+
+6. Close the folder and open browser, on the right top see the small extension icon, click it.
+
+![image](https://user-images.githubusercontent.com/40719899/219945655-2bb6bac0-af25-45b4-a6ce-a67aab0d6268.png)
+
+7. Click "Manage extensions" from the opened menu
+
+8. Now you are in the Extensions page, Make sure the "Developer mode" is turned on at the right top.
+![image](https://user-images.githubusercontent.com/40719899/219945815-3bc36852-ba5f-4a1b-8188-30aa6211cd5b.png)
+
+9. Click on "Load unpacked"
+
+![image](https://user-images.githubusercontent.com/40719899/219945842-f3fe4bb8-d4f8-43dd-94eb-df1dbcc68c87.png)
+
+10. Choose our `build` folder from the extracted zip file.
+
+![image](https://user-images.githubusercontent.com/40719899/219945880-30d0457a-8fbf-4539-a5e0-0119869cc6ca.png)
+
+11. Thats it, you can see the installed extension now like below.
+
+![image](https://user-images.githubusercontent.com/40719899/219945939-ed90d40c-df19-4dd5-a81b-36cd25f6370a.png)
 
 ### Usage
 
-To run the project, execute the following command from the root directory:
+1. This extension is in beta mode, this extension is for Automating "Connect" button clicks.
+So open https://www.linkedin.com/ and search for any filters like ceo, people etc where you can see many connect buttons
+then click on extension icon, you can see the installed extension and an option to pin the extension  
 
-````
-npm start
-````
+![image](https://user-images.githubusercontent.com/40719899/219946082-a6f11a4a-f95f-45f7-b743-364c39c9bd8f.png)  
+
+2. You can either pin in first, or click on this extension.
+
+![image](https://user-images.githubusercontent.com/40719899/219946112-b116a068-1c07-418a-bab1-0dd3763c9d53.png)
+
+3. When you click on "Start connecting", It is coded to just change the background color of the button to check the functionality instead of real click.
+If needed please let me know, I will change the one line and ship the zip file.
+
+There is a bug for the first time to fetch n syncronising data from the script file to extension. Refresh the page and click button again.  
+I am still referencing the documents on how to eliminate this bug.
+
+![LinkedInAutoConnect](https://user-images.githubusercontent.com/40719899/219946474-376ff9c9-beeb-4e65-a0e9-8e4e5337b092.gif)
 
 ### Deployment
 
@@ -128,7 +166,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project kindly give a start to this repository
+If you like this project kindly give a star to this repository
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -136,7 +174,7 @@ If you like this project kindly give a start to this repository
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- I would like to thank the person who gave me this assignment. 
+- I would like to thank the person who gave me this take home assignment opportunity
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -146,7 +184,7 @@ If you like this project kindly give a start to this repository
 
 - **What is this repo for**
 
-  - Its a takehome assignment to create a Chrome Extension
+  - Its a take home assignment for creating a chrome extension that makes auto clicking on "Connect" buttons
 
 - **How long did you take to build this extension**
 

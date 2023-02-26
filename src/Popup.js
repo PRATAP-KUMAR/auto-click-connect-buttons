@@ -1,30 +1,37 @@
 /* eslint-disable no-undef */
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 import script from './script';
 import DURATION from './duration';
-import './App.css';
+import './Popup.css';
 
-function App() {
+function Popup() {
   const [isActive, setActive] = useState(false);
   const [timer, setTimer] = useState(0);
+  const buttonRef = useRef();
 
-  const onClick = (e) => {
-    e.target.remove();
+  const onClick = () => {
+    setActive((isActive) => !isActive);
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       const activeTabId = tabs[0].id;
       chrome.scripting.executeScript({
         target: { tabId: activeTabId },
-        args: [DURATION],
-        function: script,
+        args: [DURATION, isActive],
+        func: script,
       });
     });
 
-    chrome.storage.sync.get(['timer'])
-      .then((result) => {
-        setTimer(result.timer);
-        setActive(true);
-      });
+    if (isActive) buttonRef.current.remove();
+
+    setTimeout(() => {
+      chrome.storage.local.get(['timer'])
+        .then((result) => {
+          setTimer(result.timer);
+          setTimeout(() => {
+            buttonRef.current.remove();
+          }, (result.timer * 1000 * DURATION));
+        });
+    }, 300);
   };
 
   const count = ({ remainingTime }) => {
@@ -45,39 +52,30 @@ function App() {
       {
         isActive
           ? (
-            <h3 className="invitations-count">
-              {`Invitations found on this page: ${timer}`}
-              <br />
-              <br />
+            <>
+              <h3 className="found">
+                {`Invitations found on this page: ${timer}`}
+              </h3>
               <hr />
-              <br />
-              Invitations Sent
-              <br />
-            </h3>
+            </>
           )
-          : (
-            <h3 className="invitations-count">
-              Click the button below to start
-            </h3>
-          )
+          : null
       }
+      <h3 className="sent">
+        Invitations Sent
+      </h3>
       <div className="status">
-        {
-          isActive
-            ? (
-              <CountdownCircleTimer
-                isPlaying
-                duration={timer * DURATION}
-                colors="orange"
-                size={100}
-              >
-                {count}
-              </CountdownCircleTimer>
-            )
-            : null
-        }
+        <CountdownCircleTimer
+          isPlaying={!!isActive}
+          duration={timer * DURATION}
+          colors="orange"
+          size={100}
+        >
+          {count}
+        </CountdownCircleTimer>
       </div>
       <button
+        ref={buttonRef}
         type="button"
         aria-label="click to auto click on connect button"
         onClick={onClick}
@@ -88,4 +86,4 @@ function App() {
   );
 }
 
-export default App;
+export default Popup;

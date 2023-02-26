@@ -188,7 +188,7 @@ If you like this project kindly give a star to this repository
 
 - **How long did you take to build this extension**
 
-  - 3 Days
+  - 7 Days
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

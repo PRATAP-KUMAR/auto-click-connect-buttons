@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 function script(duration, isActive) {
   if (!isActive) {
+    console.log(!isActive);
     if (!Array.isArray(window.timers)) window.timers = [];
     setTimeout(() => {
       const buttons = document.querySelectorAll('[aria-label^="Invite"]');
@@ -15,6 +16,7 @@ function script(duration, isActive) {
       });
     }, 200);
   } else {
+    console.log(!isActive);
     window.timers.forEach(clearTimeout);
     window.timers.length = 0;
   }

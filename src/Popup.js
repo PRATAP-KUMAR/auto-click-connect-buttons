@@ -11,7 +11,7 @@ function Popup() {
   const buttonRef = useRef();
 
   const onClick = () => {
-    setActive((x) => !x);
+    setActive((isActive) => !isActive);
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       const activeTabId = tabs[0].id;
       chrome.scripting.executeScript({
